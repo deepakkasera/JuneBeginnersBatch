@@ -5,13 +5,15 @@ public class Client {
         IceCream iceCream =
                 new ChocoChips(
                         new StrawberryScoop(
-                                new ChocoChips(
-                                        new ChocolateCone()
+                                new ChocolateCone(
+                                        new ChocoChips(
+                                                new OrangeCone()
+                                        )
                                 )
                         )
                 );
 
-        //Orange Cone -> Chocolate Cone -> Choco Chips -> Strawberry Scoop -> ChocoChips.
+        //Choco Cone -> -> Choco Chips -> Chocolate Cone -> Strawberry Scoop -> ChocoChips.
 
         System.out.println(iceCream.getDescription());
         System.out.println(iceCream.getCost());
